@@ -1,0 +1,79 @@
+@import "tailwindcss";
+
+:root {
+  --bg-main: #f1f5f9;
+  --bg-card: rgba(255, 255, 255, 0.95);
+  --bg-card-hover: rgba(255, 255, 255, 1);
+  --border-card: rgba(249, 115, 22, 0.15);
+  --bg-nav: rgba(255, 255, 255, 0.92);
+  --text-heading: #0f172a;
+  --text-body: #334155;
+  --text-muted: #64748b;
+  --chart-grid: rgba(0, 0, 0, 0.08);
+  --dial-track: rgba(0, 0, 0, 0.12);
+  --glow-orange: rgba(249, 115, 22, 0.25);
+}
+
+body {
+  background-color: var(--bg-main);
+  color: var(--text-heading);
+  font-family: var(--font-geist-sans), system-ui, -apple-system, sans-serif;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+/* Theme Utilities */
+.theme-bg-main {
+  background-color: var(--bg-main);
+}
+
+.theme-card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-card);
+  box-shadow: 0 8px 25px rgba(249, 115, 22, 0.06), 0 2px 10px rgba(0, 0, 0, 0.03);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.theme-card:hover {
+  border-color: rgba(249, 115, 22, 0.4);
+  box-shadow: 0 12px 35px rgba(249, 115, 22, 0.18), 0 4px 15px rgba(249, 115, 22, 0.1);
+  transform: translateY(-3px);
+}
+
+.theme-nav {
+  background-color: var(--bg-nav);
+  border: 1px solid rgba(249, 115, 22, 0.2);
+  box-shadow: 0 10px 30px rgba(249, 115, 22, 0.08);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.theme-heading {
+  color: var(--text-heading);
+}
+
+.theme-body {
+  color: var(--text-body);
+}
+
+/* Glow Utilities */
+.orange-glow {
+  box-shadow: 0 0 35px var(--glow-orange);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(249, 115, 22, 0.3);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(249, 115, 22, 0.6);
+}
