@@ -26,7 +26,7 @@ export default function FAQPage() {
     },
     {
       q: 'How does Speedox ensure upload speeds are accurate?',
-      a: 'Speedox measures physical wire throughput over a minimum 20-second sample window across parallel worker streams, calibrating against actual physical link capacity to avoid internal loopback spikes.',
+      a: 'Speedox measures physical wire throughput over a 7-second sample window across parallel worker streams, calibrating against actual physical link capacity to avoid internal loopback spikes.',
     },
     {
       q: 'Can I test my mobile 5G / 4G speed with Speedox?',

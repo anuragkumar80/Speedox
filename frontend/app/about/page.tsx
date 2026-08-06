@@ -92,7 +92,7 @@ export default function AboutPage() {
             Traditional single-stream speed tests frequently report artificially throttled numbers due to single TCP window limitations on modern operating systems. Speedox solves this by deploying parallel asynchronous worker threads via Web Streams API and FastAPI backend endpoints.
           </p>
           <p>
-            By sampling bandwidth utilization across a minimum 20-second sample window, Speedox eliminates temporary burst spikes and computes true continuous average throughput.
+            By sampling bandwidth utilization across a 7-second sample window, Speedox eliminates temporary burst spikes and computes true continuous average throughput.
           </p>
         </div>
 
