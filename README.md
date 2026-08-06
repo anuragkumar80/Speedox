@@ -44,36 +44,24 @@ Engineered for precision network diagnostics, Speedox measures true physical dow
 
 ---
 
-## 🚀 How to Deploy
+## 🚀 Getting Started
 
-### Option 1: Vercel (Frontend) + Render (Backend) — *(Recommended)*
-
-#### A. Deploy Frontend on Vercel
-1. Log into [Vercel](https://vercel.com/) and click **Add New > Project**.
-2. Select your GitHub repository: `https://github.com/anuragkumar88/Speedox`.
-3. Set **Root Directory** to `frontend`.
-4. (Optional) Add Environment Variable: `NEXT_PUBLIC_API_BASE_URL` = `https://speedox-api.onrender.com`.
-5. Click **Deploy**!
-
-#### B. Deploy Backend on Render
-1. Log into [Render](https://render.com/) and click **New > Web Service**.
-2. Connect your GitHub repository `https://github.com/anuragkumar88/Speedox`.
-3. Set **Root Directory** to `backend`.
-4. Set **Build Command**: `pip install -r requirements.txt`.
-5. Set **Start Command**: `uvicorn app.main:app --host 0.0.0.0 --port $PORT`.
-
----
-
-### Option 2: Docker Container (Render / Railway / DigitalOcean)
-Speedox includes a production `Dockerfile` for single-container deployment:
+Run both the Next.js frontend and FastAPI backend concurrently with a single command:
 
 ```bash
-# Build Docker image
-docker build -t speedox .
+# 1. Clone the repository
+git clone https://github.com/anuragkumar88/Speedox.git
+cd Speedox
 
-# Run Docker container
-docker run -p 3000:3000 -p 8000:8000 speedox
+# 2. Install root and frontend dependencies
+npm install
+
+# 3. Start development servers (Frontend + Backend)
+npm run dev
 ```
+
+- **Frontend Application**: `http://localhost:3000`
+- **FastAPI Engine**: `http://localhost:8000`
 
 ---
 
