@@ -25,7 +25,7 @@
 
 **Speedox** is a state-of-the-art broadband speed measurement platform built with **Next.js 15 App Router** and a high-performance **FastAPI asynchronous backend engine**. 
 
-Engineered for precision network diagnostics, Speedox measures true physical download bandwidth, upload throughput, latency ping, and network jitter over a minimum **20-second sample window** per phase, delivering un-inflated real-world results.
+Engineered for precision network diagnostics, Speedox measures true physical download bandwidth, upload throughput, latency ping, and network jitter over a **7-second sample window** per phase, delivering un-inflated real-world results.
 
 ---
 
@@ -33,7 +33,7 @@ Engineered for precision network diagnostics, Speedox measures true physical dow
 
 | Feature | Description |
 | :--- | :--- |
-| **⚡ 20-Second Parallel Telemetry** | Minimum 20-second sample window per test phase calculating true average Mbps throughput. |
+| **⚡ 7-Second Parallel Telemetry** | 7-second sample window per test phase calculating true average Mbps throughput at 60 FPS. |
 | **🎯 ISP Line Calibration** | Bypasses RAM loopback speed spikes to report accurate Wi-Fi / Ethernet adapter speed. |
 | **📈 Live Bandwidth Telemetry Graph** | Real-time streaming Recharts area graph displaying live download & upload waveforms. |
 | **📡 Ping & Jitter Diagnostics** | 10 sequential round-trip probes measuring latency and packet variance. |
