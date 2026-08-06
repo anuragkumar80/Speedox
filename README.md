@@ -44,17 +44,35 @@ Engineered for precision network diagnostics, Speedox measures true physical dow
 
 ---
 
-## 🏗️ System Architecture
+## 🚀 How to Deploy
 
-```mermaid
-graph TD
-    User([User Browser]) -->|HTTP Sockets / Web Streams| NextJS[Next.js 15 Frontend :3000]
-    NextJS -->|Parallel Probes| FastApi[FastAPI Backend :8000]
-    NextJS -->|Edge Stream Fallback| CDN[Public CDN Edge Workers]
-    FastApi -->|10x Latency Probes| PingEngine[/ping Endpoint]
-    FastApi -->|Chunk Stream /50mb| DownloadEngine[/download Endpoint]
-    FastApi -->|Delta Byte Tracking| UploadEngine[/upload Endpoint]
-    FastApi -->|IP / ISP Lookup| NetworkEngine[/network Endpoint]
+### Option 1: Vercel (Frontend) + Render (Backend) — *(Recommended)*
+
+#### A. Deploy Frontend on Vercel
+1. Log into [Vercel](https://vercel.com/) and click **Add New > Project**.
+2. Select your GitHub repository: `https://github.com/anuragkumar88/Speedox`.
+3. Set **Root Directory** to `frontend`.
+4. (Optional) Add Environment Variable: `NEXT_PUBLIC_API_BASE_URL` = `https://speedox-api.onrender.com`.
+5. Click **Deploy**!
+
+#### B. Deploy Backend on Render
+1. Log into [Render](https://render.com/) and click **New > Web Service**.
+2. Connect your GitHub repository `https://github.com/anuragkumar88/Speedox`.
+3. Set **Root Directory** to `backend`.
+4. Set **Build Command**: `pip install -r requirements.txt`.
+5. Set **Start Command**: `uvicorn app.main:app --host 0.0.0.0 --port $PORT`.
+
+---
+
+### Option 2: Docker Container (Render / Railway / DigitalOcean)
+Speedox includes a production `Dockerfile` for single-container deployment:
+
+```bash
+# Build Docker image
+docker build -t speedox .
+
+# Run Docker container
+docker run -p 3000:3000 -p 8000:8000 speedox
 ```
 
 ---
@@ -76,58 +94,6 @@ Speedox
     ├── AsyncIO (Multi-Stream Worker Buffers)
     └── Httpx / Aiofiles (High Concurrency Sockets)
 ```
-
----
-
-## 🚀 Getting Started
-
-### Prerequisites
-- **Node.js**: `v18.0.0` or higher
-- **Python**: `v3.10` or higher
-
-### 1. Clone & Install
-```bash
-# Clone the repository
-git clone https://github.com/anuragkumar88/Speedox.git
-
-# Navigate to project directory
-cd Speedox
-
-# Install root & frontend dependencies
-npm run setup
-```
-
-### 2. Single-Terminal Execution
-Launch both the **FastAPI Backend (Port 8000)** and **Next.js Frontend (Port 3000)** simultaneously:
-
-```bash
-npm run dev
-```
-
-- **Frontend Application**: [http://localhost:3000](http://localhost:3000)
-- **FastAPI Backend API**: [http://127.0.0.1:8000](http://127.0.0.1:8000)
-
----
-
-## 🛰️ API Reference
-
-| Endpoint | Method | Description |
-| :--- | :--- | :--- |
-| `GET /health` | `GET` | Backend server health status & connection check. |
-| `GET /ping` | `GET` | High-precision round-trip latency probe. |
-| `GET /download` | `GET` | Binary chunk download stream (`?size=50mb`). |
-| `POST /upload` | `POST` | CORS-enabled binary payload upload target. |
-| `GET /network` | `GET` | Fetches client IP address, ISP, and location details. |
-
----
-
-## 📁 Application Routes
-
-- `/` — Main Telemetry Engine & Speedometer Gauge
-- `/about` — Architecture & Ephemeral Privacy Policy
-- `/how-it-works` — Step-by-Step Testing Methodology
-- `/blog` — Tech Insights on Multi-Stream Networking & Jitter
-- `/faq` — Broadband Speed & Accuracy Q&A
 
 ---
 
