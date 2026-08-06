@@ -170,7 +170,7 @@ export const Speedometer: React.FC<SpeedometerProps> = ({ speed, stage, progress
           <motion.div
             className="w-full h-full relative"
             animate={{ rotate: needleAngle }}
-            transition={{ type: 'spring', damping: 20, stiffness: 90 }}
+            transition={{ type: 'spring', damping: 30, stiffness: 140 }}
           >
             {/* Needle Shaft */}
             <div className="absolute left-1/2 bottom-1/2 -translate-x-1/2 w-2 sm:w-2.5 h-[115px] sm:h-[135px] bg-gradient-to-t from-amber-500 via-orange-500 to-orange-400 rounded-t-full shadow-[0_0_15px_rgba(249,115,22,0.8)]" />
