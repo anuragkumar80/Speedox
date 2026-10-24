@@ -12,7 +12,7 @@
 
   ---
 
-  ### 💚 **Built By [Anurag](https://github.com/anuragkumar88)**
+  ### 💚 **Built By [Anurag](https://github.com/anuragkumar80)**
   **Powered By [Squareup Studio](https://squareupdigital.com/)**
 
   ---
@@ -50,7 +50,7 @@ Run both the Next.js frontend and FastAPI backend concurrently with a single com
 
 ```bash
 # 1. Clone the repository
-git clone https://github.com/anuragkumar88/Speedox.git
+git clone https://github.com/anuragkumar80/Speedox.git
 cd Speedox
 
 # 2. Install root and frontend dependencies
@@ -87,7 +87,7 @@ Speedox
 
 ## 👤 Author & Studio
 
-- **Built By**: [Anurag](https://github.com/anuragkumar88)
+- **Built By**: [Anurag](https://github.com/anuragkumar80)
 - **Powered By**: [Squareup Studio](https://squareupdigital.com/)
 
 ---

@@ -16,7 +16,7 @@ export const CreditSection: React.FC = () => {
         className="mb-4"
       >
         <a
-          href="https://github.com/anuragkumar88"
+          href="https://github.com/anuragkumar80"
           target="_blank"
           rel="noopener noreferrer"
           className="group inline-flex flex-col items-center"

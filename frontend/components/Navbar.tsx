@@ -97,7 +97,7 @@ export const Navbar: React.FC = () => {
 
           {/* GitHub Button */}
           <a
-            href="https://github.com/anuragkumar88"
+            href="https://github.com/anuragkumar80"
             target="_blank"
             rel="noopener noreferrer"
             className="hidden sm:flex items-center gap-2 px-3.5 py-1.5 sm:px-4 sm:py-2 rounded-full bg-slate-900 text-white hover:bg-orange-500 text-xs font-extrabold shadow-md transition-all duration-200 shrink-0"
@@ -161,7 +161,7 @@ export const Navbar: React.FC = () => {
               </a>
 
               <a
-                href="https://github.com/anuragkumar88"
+                href="https://github.com/anuragkumar80"
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => setMobileMenuOpen(false)}
