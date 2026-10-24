@@ -35,7 +35,7 @@ export const Footer: React.FC = () => {
             Privacy Policy
           </button>
           <a
-            href="https://github.com/anuragkumar88"
+            href="https://github.com/anuragkumar80"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-orange-500 transition-colors duration-200"
